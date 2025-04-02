@@ -45,7 +45,8 @@ internal enum VSAPropID
     ShowIDE = -8506,  // BOOL - default TRUE
     // !!! can be called before main initialization happen
     ShowHierarchyRootInTitle = -8507,  // BOOL - default TRUE
-    SolutionFileExt = -8508,  // BSTR - solution file extension (default - ".sln");
+    [Obsolete]
+    SolutionFileExt = -8508,  // Deprecated (will return E_NOTIMPL) -- use IVsSolution.GetProperty(VSPROPID_SolutionFileExt) or IVsBackgroundSolution.DefaultSolutionExtension instead
     UserOptsFileExt = -8509,  // BSTR - solution options file extension (default - ".suo");
     AltMSODLL = -8510,  // BSTR - path/filename for alternate MSOx DLL (default - ask MSI), exactly as passed to LoadLibrary
     CreateProjShortcuts = -8511,  // BOOL - default TRUE should shortcuts to solutions/projects be added to 'recent' folder?
